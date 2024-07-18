@@ -1,3 +1,4 @@
+/* General styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -29,47 +30,51 @@ header a {
 header ul {
     padding: 0;
     list-style: none;
+    text-align: center; /* Center align on mobile */
 }
 
 header li {
     display: inline;
-    padding: 0 20px 0 20px;
+    padding: 0 10px;
 }
 
 header .logo {
     float: left;
+    margin-left: 10px; /* Add some margin for logo */
 }
 
 header nav {
-    float: right;
+    float: none; /* Clear float for mobile */
     margin-top: 10px;
 }
 
 .hero {
     background: #77b3d4;
     color: #fff;
-    padding: 100px 0;
+    padding: 80px 0; /* Adjust padding for mobile */
     text-align: center;
 }
 
 .hero h2 {
     margin: 0;
-    font-size: 50px;
+    font-size: 40px; /* Adjust font size for mobile */
     text-transform: uppercase;
 }
 
 .hero p {
-    font-size: 20px;
+    font-size: 18px; /* Adjust font size for mobile */
+    line-height: 1.4;
 }
 
 .hero .btn {
     background: #333;
     color: #fff;
-    padding: 10px 20px;
+    padding: 12px 24px; /* Adjust button size for mobile */
     text-transform: uppercase;
     text-decoration: none;
     border-radius: 5px;
     display: inline-block;
+    margin-top: 20px; /* Add margin for spacing */
 }
 
 .hero .btn:hover {
@@ -77,20 +82,22 @@ header nav {
     color: #333;
 }
 
+/* Sections */
 section {
-    padding: 20px 0;
+    padding: 40px 0; /* Adjust padding for mobile */
 }
 
-.features ul {
-    list-style: none;
+section h2 {
+    font-size: 32px; /* Adjust font size for mobile */
+}
+
+section ul {
     padding: 0;
+    list-style: none;
 }
 
-.features li {
-    background: #f4f4f4;
-    padding: 10px;
+section ul li {
     margin-bottom: 10px;
-    border-radius: 5px;
 }
 
 footer {
@@ -101,11 +108,63 @@ footer {
 }
 
 footer ul {
-    list-style: none;
     padding: 0;
+    list-style: none;
 }
 
-footer li {
+footer ul li {
     display: inline;
     padding: 0 10px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        width: 90%; /* Adjust width for smaller screens */
+    }
+
+    header .logo {
+        float: none;
+        margin: 0; /* Reset margin for logo */
+        text-align: center; /* Center align logo on mobile */
+    }
+
+    header nav {
+        float: none;
+        margin-top: 20px; /* Adjust margin top for mobile */
+    }
+
+    header li {
+        display: block;
+        padding: 10px 0;
+    }
+
+    .hero {
+        padding: 60px 0; /* Adjust padding for smaller hero section */
+    }
+
+    .hero h2 {
+        font-size: 28px; /* Adjust font size for smaller screens */
+    }
+
+    .hero p {
+        font-size: 16px; /* Adjust font size for smaller screens */
+    }
+
+    .hero .btn {
+        padding: 10px 20px; /* Adjust button size for smaller screens */
+    }
+
+    section {
+        padding: 30px 0; /* Adjust padding for smaller sections */
+    }
+
+    section h2 {
+        font-size: 28px; /* Adjust font size for smaller screens */
+    }
+
+    footer ul li {
+        display: block;
+        padding: 10px 0;
+    }
 }
